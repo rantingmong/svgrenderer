@@ -120,7 +120,7 @@ void Parser::processParsedRefChar() {
 		//numeric character reference
 		char* endPtr;
 		char* startPtr = &*(++this->refCharBuf.begin());
-		std::uint32_t unicode = std::strtoul(startPtr, &endPtr, 16);
+		std::uint32_t unicode = (std::uint32_t) std::strtoul(startPtr, &endPtr, 16);
 		if(endPtr != startPtr + this->refCharBuf.size() - 1){
 			std::stringstream ss;
 			ss << "Unknown numeric character reference encountered: " << &*(++this->refCharBuf.begin());

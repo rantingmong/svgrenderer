@@ -1,3 +1,5 @@
+#ifdef __cplusplus
+
 #pragma once
 
 #include <vector>
@@ -146,3 +148,5 @@ public:
 	virtual ~Parser()noexcept{}
 };
 }
+
+#endif

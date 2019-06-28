@@ -1,3 +1,5 @@
+#ifdef __cplusplus
+
 #pragma once
 
 #include <string>
@@ -101,3 +103,5 @@ std::array<char, maxSizeOfUtf8EncodedCharacter_c + 1> toUtf8(char32_t c);
 
 
 }
+
+#endif
