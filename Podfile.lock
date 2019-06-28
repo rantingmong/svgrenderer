@@ -1,0 +1,39 @@
+PODS:
+  - libcairo (1.12.8):
+    - libpixman (>= 0.32.4)
+  - libmikroxml (0.1.10):
+    - libunikod (>= 2.0.17)
+    - libutki (>= 1.1.13)
+  - libpapki (1.0.43):
+    - libutki (>= 1.0.9)
+  - libpixman (0.32.4)
+  - libunikod (2.0.25):
+    - libutki (>= 1.0.8)
+  - libutki (1.1.27)
+
+DEPENDENCIES:
+  - libcairo (>= 1.12.8)
+  - libmikroxml (>= 0.1.1)
+  - libpapki (>= 1.0.3)
+  - libutki (>= 1.0.8)
+
+SPEC REPOS:
+  https://github.com/igagis/cocoapods-repo.git:
+    - libcairo
+    - libmikroxml
+    - libpapki
+    - libpixman
+    - libunikod
+    - libutki
+
+SPEC CHECKSUMS:
+  libcairo: e9a0cf13048aad476bdc99450f4ae0cdaf3fc17e
+  libmikroxml: 83dd831959db77b3479182bcfb13cb4b5ae6ee38
+  libpapki: 24a307e9b2fbba5578bedaad0335d0737bac5243
+  libpixman: b5bd634089dfce9a6bdf2076f18a549e6f2eab8d
+  libunikod: f27b5598831baa6703d6f0aaa4a5ec0c45ba688c
+  libutki: fb9e61cb09627b11a2bd9ced94adf43c18c50775
+
+PODFILE CHECKSUM: c344569e3fd39c29b1701a4c2bf20b796f7a2207
+
+COCOAPODS: 1.7.2
