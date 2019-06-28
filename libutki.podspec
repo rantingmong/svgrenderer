@@ -16,10 +16,10 @@ Pod::Spec.new do |spec|
     spec.author                 = { "Michael Ong" => "michael.ong@whitecloak.com" }
     spec.platform               = :ios, '11.0'
             
-    spec.source                 = { :git => "https://github.com/rantingmong/libsvgrenderer.git", :tag => "#{spec.version}" }
+    spec.source                 = { :git => "https://github.com/rantingmong/svgrenderer.git", :tag => "#{spec.version}" }
   
-    spec.public_header_files    = "utki/*.hpp"
-    spec.source_files           = 'utki/*.hpp'
+    spec.public_header_files    = "libutki/utki/*.hpp"
+    spec.source_files           = 'libutki/utki/*.hpp'
 
     spec.header_dir             = 'utki'
 
