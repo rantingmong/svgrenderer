@@ -30,6 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Apple related
 Pods
 .DS_Store
 xcuserdata
