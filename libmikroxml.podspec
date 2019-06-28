@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name                   = "libmikroxml"
-    spec.version                = "0.0.1"
+    spec.version                = "0.0.6"
     spec.summary                = "svg mikroxml"
 
     spec.static_framework       = true
@@ -25,7 +25,9 @@ Pod::Spec.new do |spec|
 
     spec.header_dir             = 'mikroxml'
 
+    spec.pod_target_xcconfig    = { 'OTHER_CPLUSPLUSFLAGS' => [ "-std=c++17", "-stdlib=libc++", "-fcxx-modules", "$(OTHER_CFLAGS)" ] }
+
     spec.dependency             'libutki'   , '~> 0.0.3'
-    spec.dependency             'libunikod' , '~> 0.0.5'
+    spec.dependency             'libunikod' , '~> 0.0.6'
 
   end
