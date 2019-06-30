@@ -2343,6 +2343,8 @@ fast_fetch_bilinear_cover (pixman_iter_t *iter, const uint32_t *mask)
     int32_t dist_y;
     int i;
 
+    COMPILE_TIME_ASSERT (BILINEAR_INTERPOLATION_BITS < 8);
+
     fx = info->x;
     ux = iter->image->common.transform->matrix[0][0];
 
@@ -2814,7 +2816,7 @@ bits_image_fetch_separable_convolution_affine (pixman_image_t * image,
 			    }
 			}
 
-			f = (pixman_fixed_t)(((pixman_fixed_32_32_t)fx * fy + 0x8000) >> 16);
+			f = ((pixman_fixed_32_32_t)fx * fy + 0x8000) >> 16;
 			srtot += (int)RED_8 (pixel) * f;
 			sgtot += (int)GREEN_8 (pixel) * f;
 			sbtot += (int)BLUE_8 (pixel) * f;

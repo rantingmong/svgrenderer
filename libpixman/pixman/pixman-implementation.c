@@ -121,7 +121,7 @@ _pixman_implementation_lookup_composite (pixman_implementation_t  *toplevel,
 
 	while (info->op != PIXMAN_OP_NONE)
 	{
-	    if ((info->op == op || ((int)(info->op)) == PIXMAN_OP_any)		&&
+	    if ((info->op == op || info->op == PIXMAN_OP_any)		&&
 		/* Formats */
 		((info->src_format == src_format) ||
 		 (info->src_format == PIXMAN_any))			&&
@@ -362,9 +362,9 @@ _pixman_disabled (const char *name)
 	    int len;
 
 	    if ((end = strchr (env, ' ')))
-		len = (int)(end - env);
+		len = end - env;
 	    else
-		len = (int)strlen (env);
+		len = strlen (env);
 
 	    if (strlen (name) == len && strncmp (name, env, len) == 0)
 	    {
@@ -379,6 +379,11 @@ _pixman_disabled (const char *name)
 
     return FALSE;
 }
+
+static const pixman_fast_path_t empty_fast_path[] =
+{
+    { PIXMAN_OP_NONE }
+};
 
 pixman_implementation_t *
 _pixman_choose_implementation (void)
@@ -396,6 +401,17 @@ _pixman_choose_implementation (void)
     imp = _pixman_mips_get_implementations (imp);
 
     imp = _pixman_implementation_create_noop (imp);
+
+    if (_pixman_disabled ("wholeops"))
+    {
+        pixman_implementation_t *cur;
+
+        /* Disable all whole-operation paths except the general one,
+         * so that optimized iterators are used as much as possible.
+         */
+        for (cur = imp; cur->fallback; cur = cur->fallback)
+            cur->fast_paths = empty_fast_path;
+    }
 
     return imp;
 }
