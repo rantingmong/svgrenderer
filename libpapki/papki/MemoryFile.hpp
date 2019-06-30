@@ -1,3 +1,5 @@
+#ifdef __cplusplus
+
 /**
  * @author Ivan Gagis <igagis@gmail.com>
  */
@@ -81,3 +83,5 @@ protected:
 };
 
 }//~namespace
+
+#endif

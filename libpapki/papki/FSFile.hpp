@@ -1,3 +1,5 @@
+#ifdef __cplusplus
+
 /**
  * @file Ordinary file system File implementation
  * @author Ivan Gagis <igagis@gmail.com>
@@ -86,3 +88,5 @@ public:
 
 
 }//~namespace
+
+#endif

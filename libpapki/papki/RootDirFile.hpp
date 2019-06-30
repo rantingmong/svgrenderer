@@ -1,3 +1,5 @@
+#ifdef __cplusplus
+
 /**
  * @file File wrapper allowing to set root path.
  * @author Ivan Gagis <igagis@gmail.com>
@@ -91,3 +93,5 @@ private:
 };
 
 }
+
+#endif

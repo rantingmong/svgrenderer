@@ -1,3 +1,5 @@
+#ifdef __cplusplus
+
 /**
  * @file File abstract interface
  * @author Ivan Gagis <igagis@gmail.com>
@@ -451,3 +453,5 @@ public:
 
 
 }//~namespace
+
+#endif

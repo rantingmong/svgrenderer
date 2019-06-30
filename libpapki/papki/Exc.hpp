@@ -1,3 +1,5 @@
+#ifdef __cplusplus
+
 #pragma once
 
 #include <utki/config.hpp>
@@ -39,3 +41,5 @@ public:
 };
 
 }
+
+#endif
