@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = "libcairo"
-    s.version           = "0.0.8"
+    s.version           = "0.0.9"
     s.summary           = "Cairo library."
     s.homepage          = "https://github.com/igagis/cairo"
     s.license           = 'https://raw.githubusercontent.com/igagis/cairo/master/COPYING'
@@ -8,6 +8,11 @@ Pod::Spec.new do |s|
     s.platform          = :ios, "11.0"
 
     s.compiler_flags    = '-DCAIRO_NO_MUTEX=1', '-DHAVE_STDINT_H', '-DHAVE_UINT64_T', '-I${PODS_ROOT}/libpixman/libpixman/pixman', "-Wno-everything"
+
+    s.public_header_files   = "libcairo/cairo/cairo-features.h",
+                              "libcairo/cairo/cairo-deprecated.h",
+                              "libcairo/cairo/cairo.h",
+                              "libcairo/cairo-version.h"
 
     s.static_framework  = true
 
