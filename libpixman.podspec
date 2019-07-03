@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name                   = "libpixman"
-    spec.version                = "0.0.7"
+    spec.version                = "0.0.8"
     spec.summary                = "svg pixman"
 
     spec.static_framework       = true
@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
                                   "libpixman/pixman/pixman.h",
                                   "libpixman/pixman/pixman-version.h"
 
-    spec.source_files           = "libpixman/**/pixman-{access-accessors.c,access.c,arm-asm.c,arm-neon.c,arm-simd.c,arm.c,bits-image.c,combine-float.c,combine32.c,conical-gradient.c,edge-accessors.c,edge.c,fast-path.c,filter.c,general.c,gradient-walker.c,image.c,implmentation.c,linear-gradient.c,matrix.c,mips.c,noop.c,ppc.c,radial-radient.c,region16.c,region32.c,solid-fill.c,timer.c,trap.c,utils.c,x86.c}",
+    spec.source_files           = "libpixman/**/pixman-{access-accessors.c,access.c,arm-asm.c,arm-neon.c,arm-simd.c,arm.c,bits-image.c,combine-float.c,combine32.c,conical-gradient.c,edge-accessors.c,edge.c,fast-path.c,filter.c,general.c,gradient-walker.c,image.c,implementation.c,linear-gradient.c,matrix.c,mips.c,noop.c,ppc.c,radial-gadient.c,region16.c,region32.c,solid-fill.c,timer.c,trap.c,utils.c,x86.c}",
                                   "libpixman/**/pixman.c",
                                   "libpixman/**/pixman-*.h",
                                   "libpixman/**/config.h",

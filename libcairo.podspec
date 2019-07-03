@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
 
     s.header_mappings_dir   = "libcairo/cairo"
 
-    s.dependency            'libpixman', '~> 0.0.7'
+    s.dependency            'libpixman', '~> 0.0.8'
 
 end
