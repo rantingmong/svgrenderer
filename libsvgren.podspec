@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
     s.header_dir            = 'svgren'
 
     s.dependency 'libsvgdom', '~> 0.0.8'
-    s.dependency 'libcairo' , '~> 0.0.9'
+    s.dependency 'libcairo' , '~> 0.0.10'
 end

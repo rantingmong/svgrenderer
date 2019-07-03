@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name                  = "libcairo"
-    s.version               = "0.0.10"
+    s.version               = "0.0.11"
     s.summary               = "Cairo library."
     s.homepage              = "https://github.com/igagis/cairo"
     s.license               = 'https://raw.githubusercontent.com/igagis/cairo/master/COPYING'
@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
 
     s.header_mappings_dir   = "libcairo/cairo"
 
-    s.dependency            'libpixman', '~> 0.0.8'
+    s.dependency            'libpixman', '~> 0.0.11'
 
 end

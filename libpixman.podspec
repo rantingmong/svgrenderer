@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name                   = "libpixman"
-    spec.version                = "0.0.8"
+    spec.version                = "0.0.11"
     spec.summary                = "svg pixman"
 
     spec.static_framework       = true
