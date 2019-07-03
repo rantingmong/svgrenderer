@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                  = "libsvgdom"
-    s.version               = "0.0.8"
+    s.version               = "0.0.10"
     s.summary               = "C++ cross-platform SVG DOM library."
     s.homepage              = "https://github.com/igagis/svgdom"
     s.license               = 'MIT'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.source                = { :git => "https://github.com/rantingmong/svgrenderer.git", :tag => s.version }
   
     s.source_files          = "libsvgdom/**/*.{hpp,hxx,cpp}"
-    s.header_mappings_dir   = "libsvgdom"
+    s.header_mappings_dir   = "libsvgdom/svgdom"
 
     s.header_dir            = 'svgdom'
 
